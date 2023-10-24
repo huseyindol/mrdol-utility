@@ -47,5 +47,6 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/huseyindol"
-  }
+  },
+  "repository": "https://github.com/huseyindol/mrdol-utility.git"
 }
