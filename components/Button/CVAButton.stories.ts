@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ButtonComp as Button } from './Button';
+import { CVAButtonComp as Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Button> = {
-  title: 'Example/Button',
+  title: 'Example/CVAButton',
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -21,32 +21,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const Default: Story = {
+  args: {
+    children: 'Button',
+  },
+};
+
 export const Primary: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
+    variant: 'primary',
   },
 };
 
-export const Secondary: Story = {
+export const Monochrome: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
+    variant: 'monochrome',
   },
 };
 
-export const Large: Story = {
+export const Destructive: Story = {
   args: {
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    className: 'bg-red-600',
+    children: 'Button',
+    variant: 'destructive',
   },
 };
