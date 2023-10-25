@@ -2,13 +2,15 @@ import Image from 'next/image';
 import { Header } from '@/components/Header/Header';
 import { Example } from '@/components/Example/Example';
 import PageClient from './Page.Client';
-import { CVAButtonComp } from '@/components/Button/Button';
+import { CVAButtonComp as CVAButton } from '@/components/CVAButton/CVAButton';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
-      <CVAButtonComp variant="primary">Button</CVAButtonComp>
+      <CVAButton variant={'primary'} className="bg-red-600">
+        Button
+      </CVAButton>
       <Example />
       <PageClient />
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">

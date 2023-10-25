@@ -1,10 +1,7 @@
 import { Badge, Card, Container, Flex, Heading, Text } from '@radix-ui/themes';
 import { ChatBubbleIcon } from '@radix-ui/react-icons';
-import React from 'react';
 
-type Props = {};
-
-export const Example = (props: Props) => {
+export const Example = () => {
   return (
     <Container size="1">
       <Flex direction="column" pb="4">

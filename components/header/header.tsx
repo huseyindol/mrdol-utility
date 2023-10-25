@@ -1,7 +1,8 @@
 import React from 'react';
 
 import './header.css';
-import { ButtonComp as Button, CVAButtonComp } from '../Button/Button';
+import { ButtonComp as Button } from '../Button/Button';
+import { CVAButtonComp } from '../CVAButton/CVAButton';
 
 type User = {
   name: string;

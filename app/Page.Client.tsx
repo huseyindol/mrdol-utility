@@ -1,7 +1,7 @@
 'use client';
-import { CVAButtonComp as CVAButton } from '@/components/Button/Button';
 import FormDemo from '@/components/FormDemo/FormDemo';
 import React from 'react';
+import { CVAButton } from '..';
 
 type Props = {};
 const PreviewPane = ({ children, title }: { children: React.ReactNode; title: string }) => (
