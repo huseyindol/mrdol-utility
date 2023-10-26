@@ -1,7 +1,7 @@
 'use client';
-import FormDemo from '@/components/FormDemo/FormDemo';
 import React from 'react';
 import { CVAButton } from '..';
+import FormDemo from '@/components/FormDemo/FormDemo';
 
 type Props = {};
 const PreviewPane = ({ children, title }: { children: React.ReactNode; title: string }) => (
@@ -68,11 +68,9 @@ const PageClient = (props: Props) => {
           <CVAButton variant="primary" disabled>
             Add product (disabled)
           </CVAButton>
-          asd
           <CVAButton variant="primary" modifier="outline">
             Add product (outline)asdsad
           </CVAButton>
-          asd
           <CVAButton variant="primary" modifier="plain">
             Add product (plain)
           </CVAButton>

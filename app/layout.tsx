@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Header } from '@/components';
-import { Button, Theme } from '@radix-ui/themes';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,11 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Theme accentColor="mint" grayColor="gray" panelBackground="solid" scaling="100%" radius="full">
-          {children}
-        </Theme>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
