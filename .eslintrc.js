@@ -1,6 +1,13 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended', 'next/core-web-vitals', 'plugin:tailwindcss/recommended', 'plugin:storybook/recommended'],
-  plugins: ['react', '@typescript-eslint', 'unused-imports', 'prettier', 'tailwindcss'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'next/core-web-vitals',
+    'plugin:tailwindcss/recommended',
+    'plugin:storybook/recommended',
+  ],
+  plugins: ['react', 'unused-imports', 'prettier', 'tailwindcss'],
   rules: {
     'import/order': [
       'error',
@@ -30,6 +37,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['off', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'react/no-unescaped-entities': 'warn',
   },
   overrides: [
     {

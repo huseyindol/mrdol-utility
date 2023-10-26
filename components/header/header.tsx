@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './header.css';
-import { ButtonComp as Button } from '../Button/Button';
 import { CVAButtonComp } from '../CVAButton/CVAButton';
 
 type User = {
@@ -27,7 +26,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
               <path d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z" fill="#91BAF8" />
             </g>
           </svg>
-          <h1 className="inline-block my-2 ml-3">Acme</h1>
+          <h1 className="my-2 ml-3 inline-block">Acme</h1>
         </div>
         <div>
           {user ? (
@@ -41,7 +40,9 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
             </>
           ) : (
             <>
-              <Button label="Log in" onClick={onLogin}></Button>
+              <CVAButtonComp variant={'primary'} onClick={onLogin}>
+                Log in
+              </CVAButtonComp>
               <CVAButtonComp variant={'primary'} onClick={onCreateAccount}>
                 Sign up
               </CVAButtonComp>

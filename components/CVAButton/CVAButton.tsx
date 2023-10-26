@@ -1,21 +1,22 @@
+import React, { ButtonHTMLAttributes } from 'react';
+
 import { VariantProps, cva } from 'class-variance-authority';
-import React, { ButtonHTMLAttributes, HtmlHTMLAttributes } from 'react';
 
 export type ButtonVariantProps = VariantProps<typeof button>;
-export const button = cva('rounded-md relative', {
+export const button = cva('relative rounded-md', {
   variants: {
     variant: {
-      default: 'bg-white text-text shadow-button border border-gray-400',
+      default: 'text-text shadow-button border border-gray-400 bg-white',
       primary: 'bg-primary text-white',
       destructive: 'bg-destructive text-white',
-      monochrome: 'bg-white text-text border border-gray-400',
+      monochrome: 'text-text border border-gray-400 bg-white',
     },
     modifier: {
-      outline: 'bg-transparent border border-current shadow-[0_0_0_1px_currentColor]',
-      plain: 'shadow-none bg-transparent border-none px-2 py-1 text-sm',
+      outline: 'border border-current bg-transparent shadow-[0_0_0_1px_currentColor]',
+      plain: 'border-none bg-transparent px-2 py-1 text-sm shadow-none',
     },
     size: {
-      slim: 'text-sm',
+      small: 'text-sm',
       medium: 'text-sm',
       large: 'text-base',
     },
@@ -49,12 +50,12 @@ export const button = cva('rounded-md relative', {
     },
     {
       modifier: undefined,
-      size: 'slim',
+      size: 'small',
       className: '!px-3 !py-[3px]',
     },
     {
       modifier: 'outline',
-      size: 'slim',
+      size: 'small',
       className: '!px-3 !py-[3px]',
     },
     {
@@ -98,7 +99,7 @@ export interface IButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElemen
   loading?: boolean;
   variant?: 'default' | 'primary' | 'destructive' | 'monochrome' | null | undefined;
   modifier?: 'outline' | 'plain' | null | undefined;
-  size?: 'slim' | 'medium' | 'large' | null | undefined;
+  size?: 'small' | 'medium' | 'large' | null | undefined;
   fullWidth?: boolean | undefined;
   disabled?: boolean | undefined;
 }
@@ -117,7 +118,7 @@ export const CVAButtonComp = ({
     <button className={`${button({ variant, modifier, size, fullWidth, disabled })} ${className}`}>
       <span className={loading ? 'text-transparent' : ''}>{children}</span>
       {loading && (
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block w-4 h-4">
+        <span className="absolute left-1/2 top-1/2 block h-4 w-4 -translate-x-1/2 -translate-y-1/2">
           <svg className="animate-spin" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path
               className="fill-current"

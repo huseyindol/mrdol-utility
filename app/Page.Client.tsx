@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { CVAButton } from '..';
-import FormDemo from '@/components/FormDemo/FormDemo';
 
 type Props = {};
 const PreviewPane = ({ children, title }: { children: React.ReactNode; title: string }) => (
@@ -20,9 +19,6 @@ const Col = ({ children, title }: { children: React.ReactNode; title: string }) 
 const PageClient = (props: Props) => {
   return (
     <div>
-      <PreviewPane title="Form">
-        <FormDemo />
-      </PreviewPane>
       <PreviewPane title="Buttons on steroids with CVA">
         <Col title="Regular">
           <CVAButton>Add product</CVAButton>
